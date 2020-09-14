@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		47580EE8250FC2F800F0B733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580EE7250FC2F800F0B733 /* AppDelegate.swift */; };
 		47580EEA250FC2F800F0B733 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580EE9250FC2F800F0B733 /* SceneDelegate.swift */; };
-		47580EEC250FC2F800F0B733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580EEB250FC2F800F0B733 /* ViewController.swift */; };
 		47580EEF250FC2F800F0B733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47580EED250FC2F800F0B733 /* Main.storyboard */; };
 		47580EF1250FC2FD00F0B733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47580EF0250FC2FD00F0B733 /* Assets.xcassets */; };
 		47580EF4250FC2FD00F0B733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47580EF2250FC2FD00F0B733 /* LaunchScreen.storyboard */; };
+		47580F01250FD23800F0B733 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F00250FD23800F0B733 /* MainViewController.swift */; };
+		47580F03250FD26A00F0B733 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F02250FD26A00F0B733 /* MainInteractor.swift */; };
+		47580F05250FD28000F0B733 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F04250FD28000F0B733 /* MainPresenter.swift */; };
+		47580F07250FD28F00F0B733 /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F06250FD28F00F0B733 /* MainWorker.swift */; };
+		47580F09250FD2A300F0B733 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F08250FD2A300F0B733 /* MainModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		47580EE4250FC2F800F0B733 /* Drop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47580EE7250FC2F800F0B733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47580EE9250FC2F800F0B733 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47580EEB250FC2F800F0B733 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47580EEE250FC2F800F0B733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47580EF0250FC2FD00F0B733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47580EF3250FC2FD00F0B733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47580EF5250FC2FD00F0B733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47580F00250FD23800F0B733 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		47580F02250FD26A00F0B733 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		47580F04250FD28000F0B733 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		47580F06250FD28F00F0B733 /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
+		47580F08250FD2A300F0B733 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		47580EE6250FC2F800F0B733 /* Drop */ = {
 			isa = PBXGroup;
 			children = (
+				47580EFB250FC30C00F0B733 /* App */,
+				47580EFE250FC33600F0B733 /* Resources */,
+				47580EFC250FC31D00F0B733 /* Scenes */,
+				47580EFF250FC34000F0B733 /* Supporting Files */,
+			);
+			path = Drop;
+			sourceTree = "<group>";
+		};
+		47580EFB250FC30C00F0B733 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				47580EE7250FC2F800F0B733 /* AppDelegate.swift */,
 				47580EE9250FC2F800F0B733 /* SceneDelegate.swift */,
-				47580EEB250FC2F800F0B733 /* ViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		47580EFC250FC31D00F0B733 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				47580EFD250FC32600F0B733 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		47580EFD250FC32600F0B733 /* Main */ = {
+			isa = PBXGroup;
+			children = (
 				47580EED250FC2F800F0B733 /* Main.storyboard */,
+				47580F00250FD23800F0B733 /* MainViewController.swift */,
+				47580F02250FD26A00F0B733 /* MainInteractor.swift */,
+				47580F04250FD28000F0B733 /* MainPresenter.swift */,
+				47580F06250FD28F00F0B733 /* MainWorker.swift */,
+				47580F08250FD2A300F0B733 /* MainModels.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		47580EFE250FC33600F0B733 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				47580EF0250FC2FD00F0B733 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		47580EFF250FC34000F0B733 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				47580EF2250FC2FD00F0B733 /* LaunchScreen.storyboard */,
 				47580EF5250FC2FD00F0B733 /* Info.plist */,
 			);
-			path = Drop;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47580EEC250FC2F800F0B733 /* ViewController.swift in Sources */,
+				47580F05250FD28000F0B733 /* MainPresenter.swift in Sources */,
+				47580F01250FD23800F0B733 /* MainViewController.swift in Sources */,
 				47580EE8250FC2F800F0B733 /* AppDelegate.swift in Sources */,
 				47580EEA250FC2F800F0B733 /* SceneDelegate.swift in Sources */,
+				47580F07250FD28F00F0B733 /* MainWorker.swift in Sources */,
+				47580F09250FD2A300F0B733 /* MainModels.swift in Sources */,
+				47580F03250FD26A00F0B733 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 554X8TL4T7;
-				INFOPLIST_FILE = Drop/Info.plist;
+				INFOPLIST_FILE = "Drop/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 554X8TL4T7;
-				INFOPLIST_FILE = Drop/Info.plist;
+				INFOPLIST_FILE = "Drop/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
