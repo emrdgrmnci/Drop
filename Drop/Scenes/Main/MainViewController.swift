@@ -131,8 +131,6 @@ extension MainViewController: UICollectionViewDataSource {
         else {
             cell.layer.borderWidth = 0
         }
-
-
         return cell
     }
 }
