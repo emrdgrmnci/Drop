@@ -20,7 +20,9 @@ class MainViewController: UIViewController, MainDisplayLogic {
     var interactor: MainBusinessLogic?
 
     var displayedData: [Todo] = []
+    var displayedTodoData: [Todo] = []
 
+    //MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareTableView()
@@ -31,6 +33,14 @@ class MainViewController: UIViewController, MainDisplayLogic {
     func fetchTodayInTodos() {
         let request = ListToday.FetchToday.Request()
         interactor?.fetchTodayInTodos(request: request)
+    }
+
+    //MARK: - reloadTableView
+    fileprivate func reloadTableView() {
+        displayedData = displayedTodoData
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: Setup
