@@ -17,7 +17,7 @@ class MainPresenter: MainPresentationLogic {
 
   func presentFetchedToday(response: ListToday.FetchToday.Response) {
     if let displayedTodo = response.todo {
-      let viewModel = ListToday.FetchToday.ViewModel(displayedTodo: displayedTodo)
+        let viewModel = ListToday.FetchToday.ViewModel(displayedTodos: displayedTodo)
       viewController?.displayTodayData(viewModel: viewModel)
     }else{
       print("error")

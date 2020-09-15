@@ -62,7 +62,8 @@ class MainViewController: UIViewController, MainDisplayLogic {
     }
 
     func displayTodayData(viewModel: ListToday.FetchToday.ViewModel) {
-
+        displayedTodoData = viewModel.displayedTodos
+        reloadTableView()
     }
 }
 

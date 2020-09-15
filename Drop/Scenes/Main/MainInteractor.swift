@@ -18,14 +18,15 @@ protocol MainDataStore {
 class MainInteractor: MainBusinessLogic, MainDataStore {
     var presenter: MainPresentationLogic?
     var mainWorker: MainWorker?
-    var todo: Todo?
+    var todo: [Todo]?
 
     func fetchTodayInTodos(request: ListToday.FetchToday.Request) {
         mainWorker = MainWorker()
         mainWorker?.fetchTodayInTodos(completion: { (todo, err) in
-            self.todo = todo
-            let response = ListToday.FetchToday.Response(todo: todo)
-            //        print(response)
+            let todos = [todo]
+            self.todo = todos
+            let response = ListToday.FetchToday.Response(todo: todos)
+            print("response: \(response)")
             self.presenter?.presentFetchedToday(response: response)
         })
     }

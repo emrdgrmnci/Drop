@@ -15,10 +15,10 @@ enum ListToday
         struct Request {
         }
         struct Response : Codable {
-            var todo: Todo?
+            var todo: [Todo]?
         }
         struct ViewModel {
-            var displayedTodo: Todo
+            var displayedTodos: [Todo]
         }
     }
 }
