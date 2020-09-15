@@ -37,7 +37,6 @@
                                                                 <constraint firstAttribute="height" constant="31" id="Lm6-Cr-DAy"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gOG-vT-0Df">
@@ -63,37 +62,42 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VAk-7H-WYU">
-                                <rect key="frame" x="0.0" y="44" width="414" height="173"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l6E-dO-e4e">
+                                <rect key="frame" x="0.0" y="44" width="414" height="172"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Olh-7t-Ixj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="BH5-1r-TLq"/>
+                                    <constraint firstAttribute="height" constant="172" id="mJD-Da-PFZ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="egn-hD-GAE">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="Hae-Ed-O0d" customClass="MainCollectionViewCell" customModule="Drop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="dcc-CY-uBR" customClass="MainCollectionViewCell" customModule="Drop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="129.5" height="123.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rMM-S9-7LX">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Llt-6F-gXB">
+                                            <rect key="frame" x="0.0" y="0.0" width="129.5" height="123.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d49-f7-EYp">
-                                                    <rect key="frame" x="24" y="50.5" width="80" height="27.5"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2h-Ve-rXR">
+                                                    <rect key="frame" x="30" y="50" width="69.5" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="d49-f7-EYp" firstAttribute="centerY" secondItem="rMM-S9-7LX" secondAttribute="centerY" id="MmO-tZ-ack"/>
-                                                <constraint firstItem="d49-f7-EYp" firstAttribute="centerX" secondItem="rMM-S9-7LX" secondAttribute="centerX" id="ujo-OZ-cnc"/>
+                                                <constraint firstItem="Q2h-Ve-rXR" firstAttribute="leading" secondItem="Llt-6F-gXB" secondAttribute="leading" constant="30" id="2fD-er-6ZM"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q2h-Ve-rXR" secondAttribute="trailing" constant="30" id="A8c-xk-h5L"/>
+                                                <constraint firstItem="Q2h-Ve-rXR" firstAttribute="top" secondItem="Llt-6F-gXB" secondAttribute="top" constant="50" id="Fmt-Hg-ywp"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q2h-Ve-rXR" secondAttribute="bottom" constant="50" id="PGe-8s-W7D"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="dayLabel" destination="d49-f7-EYp" id="Cqi-Kp-eRQ"/>
+                                            <outlet property="dayLabel" destination="Q2h-Ve-rXR" id="4l6-Vk-0iz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -101,19 +105,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="VAk-7H-WYU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0UT-KH-LSB"/>
-                            <constraint firstItem="VAk-7H-WYU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5I0-SE-UiV"/>
-                            <constraint firstItem="VAk-7H-WYU" firstAttribute="trailing" secondItem="sO2-VF-NOn" secondAttribute="trailing" id="8mQ-4D-GyK"/>
+                            <constraint firstItem="l6E-dO-e4e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7vS-Tb-PE7"/>
+                            <constraint firstItem="l6E-dO-e4e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L6U-Jb-m7E"/>
                             <constraint firstItem="sO2-VF-NOn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TYb-YB-9Nz"/>
-                            <constraint firstItem="VAk-7H-WYU" firstAttribute="leading" secondItem="sO2-VF-NOn" secondAttribute="leading" id="cT2-Kt-2QY"/>
+                            <constraint firstItem="sO2-VF-NOn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i7T-Yh-01d"/>
                             <constraint firstItem="sO2-VF-NOn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="171" id="ohd-R7-EcK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VAk-7H-WYU" secondAttribute="bottom" constant="645" id="plB-no-KrE"/>
-                            <constraint firstItem="VAk-7H-WYU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="scL-pA-AB0"/>
+                            <constraint firstItem="l6E-dO-e4e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tR3-Vf-vjo"/>
+                            <constraint firstItem="sO2-VF-NOn" firstAttribute="leading" secondItem="l6E-dO-e4e" secondAttribute="leading" id="vDr-VR-yyz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="VAk-7H-WYU" id="sSi-9g-5Vd"/>
+                        <outlet property="collectionView" destination="l6E-dO-e4e" id="0Eo-tr-5b3"/>
                         <outlet property="tableView" destination="sO2-VF-NOn" id="wn7-dW-bNj"/>
                     </connections>
                 </viewController>
