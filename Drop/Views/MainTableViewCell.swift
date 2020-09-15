@@ -12,6 +12,7 @@ class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var todoTitleLabel: UILabel!
     @IBOutlet weak var todoSwitch: UISwitch!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,4 +24,8 @@ class MainTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configureCell(dailyData: Todo) {
+        todoTitleLabel.text = dailyData.title
+        todoSwitch.isOn = dailyData.completed
+    }
 }
