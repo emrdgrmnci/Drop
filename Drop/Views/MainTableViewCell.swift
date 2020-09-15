@@ -15,13 +15,12 @@ class MainTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        todoTitleLabel.adjustsFontSizeToFitWidth = true
+        todoTitleLabel.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        todoTitleLabel.adjustsFontSizeToFitWidth = true
-        todoTitleLabel.sizeToFit()
     }
 
     func configureCell(dailyData: Todo) {
