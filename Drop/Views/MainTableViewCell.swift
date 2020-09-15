@@ -17,7 +17,7 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var todoTitleLabel: UILabel!
     @IBOutlet weak var todoSwitch: UISwitch!
 
-    weak var delegate: TableViewUpdater?
+     weak var delegate: TableViewUpdater?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,10 +31,10 @@ class MainTableViewCell: UITableViewCell {
 
     func configureCell(dailyData: Todo) {
         todoTitleLabel.text = dailyData.title
-        todoSwitch.isOn = dailyData.completed
+//        todoSwitch.isOn = dailyData.completed
     }
 
     func updateTableView() {
-        self.delegate?.updateTableView()
+      self.delegate?.updateTableView()
     }
 }

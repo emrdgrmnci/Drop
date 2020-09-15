@@ -12,5 +12,9 @@ struct Todo: Codable {
     let userId: Int?
     let id: Int?
     let title: String?
-    let completed = true
+    let completed: Bool?
+}
+
+struct Day {
+    let name: String
 }

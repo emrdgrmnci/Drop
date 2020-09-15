@@ -23,9 +23,8 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
     func fetchTodayInTodos(request: ListToday.FetchToday.Request) {
         mainWorker = MainWorker()
         mainWorker?.fetchTodayInTodos(completion: { (todo, err) in
-            let todos = [todo]
-            self.todo = todos
-            let response = ListToday.FetchToday.Response(todo: todos)
+            self.todo = todo
+            let response = ListToday.FetchToday.Response(todo: todo)
             print("response: \(response)")
             self.presenter?.presentFetchedToday(response: response)
         })

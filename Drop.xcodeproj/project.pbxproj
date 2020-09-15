@@ -10,6 +10,7 @@
 		4733CFA92510FD7800F91EB0 /* todo.json in Resources */ = {isa = PBXBuildFile; fileRef = 4733CFA82510FD7800F91EB0 /* todo.json */; };
 		4733CFAC2511015300F91EB0 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733CFAB2511015300F91EB0 /* Todo.swift */; };
 		4733CFAF2511153700F91EB0 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733CFAE2511153700F91EB0 /* MainTableViewCell.swift */; };
+		4733CFB12511306100F91EB0 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733CFB02511306100F91EB0 /* MainCollectionViewCell.swift */; };
 		47580EE8250FC2F800F0B733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580EE7250FC2F800F0B733 /* AppDelegate.swift */; };
 		47580EEA250FC2F800F0B733 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580EE9250FC2F800F0B733 /* SceneDelegate.swift */; };
 		47580EEF250FC2F800F0B733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47580EED250FC2F800F0B733 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		4733CFA82510FD7800F91EB0 /* todo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = todo.json; sourceTree = "<group>"; };
 		4733CFAB2511015300F91EB0 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		4733CFAE2511153700F91EB0 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		4733CFB02511306100F91EB0 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		47580EE4250FC2F800F0B733 /* Drop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47580EE7250FC2F800F0B733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47580EE9250FC2F800F0B733 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				4733CFAE2511153700F91EB0 /* MainTableViewCell.swift */,
+				4733CFB02511306100F91EB0 /* MainCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				4733CFAC2511015300F91EB0 /* Todo.swift in Sources */,
 				47580EEA250FC2F800F0B733 /* SceneDelegate.swift in Sources */,
 				47580F07250FD28F00F0B733 /* MainWorker.swift in Sources */,
+				4733CFB12511306100F91EB0 /* MainCollectionViewCell.swift in Sources */,
 				47580F09250FD2A300F0B733 /* MainModels.swift in Sources */,
 				47580F03250FD26A00F0B733 /* MainInteractor.swift in Sources */,
 			);

@@ -19,6 +19,14 @@ class MainViewController: UIViewController, MainDisplayLogic {
 
     var interactor: MainBusinessLogic?
 
+    let days = [Day(name: "Monday"),
+                Day(name: "Tuesday"),
+                Day(name: "Wednesday"),
+                Day(name: "Thursday"),
+                Day(name: "Friday"),
+                Day(name: "Saturday"),
+                Day(name: "Sunday")]
+
     var displayedData: [Todo] = []
     var displayedTodoData: [Todo] = []
 
@@ -26,6 +34,7 @@ class MainViewController: UIViewController, MainDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareTableView()
+        prepareCollectionView()
         fetchTodayInTodos()
     }
 
@@ -57,9 +66,15 @@ class MainViewController: UIViewController, MainDisplayLogic {
     func prepareTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        //        tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
+    }
+
+    //MARK: - prepareCollectionView
+    func prepareCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 
     //MARK: - displayTodayData
@@ -97,4 +112,34 @@ extension MainViewController: TableViewUpdater {
             self.tableView.reloadData()
         }
     }
+}
+
+extension MainViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        days.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
+        let data = days[indexPath.row]
+        cell..text = data.name
+        //        print("data: \(data)")
+        //        cell.configureCell(dailyData: data)
+        //        cell.delegate = self
+        return cell
+    }
+}
+
+//MARK: - CollectionViewUpdater
+extension MainViewController: CollectionViewUpdater {
+    func updateCollectionView() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+}
+
+//MARK: - UICollectionViewDelegate
+extension MainViewController: UICollectionViewDelegate {
+
 }
