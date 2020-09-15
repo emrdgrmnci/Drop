@@ -36,7 +36,29 @@ class MainViewController: UIViewController, MainDisplayLogic {
         presenter.viewController = viewController
     }
 
+    func prepareTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44
+    }
+
     func displayTodayData(viewModel: ListToday.FetchToday.ViewModel) {
 
     }
+}
+
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    }
+}
+
+extension MainViewController: UITableViewDelegate {
+    
 }
