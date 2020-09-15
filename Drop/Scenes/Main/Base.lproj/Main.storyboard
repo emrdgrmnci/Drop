@@ -20,13 +20,39 @@
                                 <rect key="frame" x="0.0" y="215" width="414" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="C8r-mG-wIb">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainTableViewCell" rowHeight="78" id="C8r-mG-wIb" customClass="MainTableViewCell" customModule="Drop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C8r-mG-wIb" id="UVL-lH-De8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="163" translatesAutoresizingMaskIntoConstraints="NO" id="0xC-YF-MRc">
+                                                    <rect key="frame" x="20" y="29" width="376" height="31"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kıyafetlerini ütüle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXx-cf-yPc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="164" height="31"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOG-vT-0Df">
+                                                            <rect key="frame" x="327" y="0.0" width="51" height="31"/>
+                                                        </switch>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="0xC-YF-MRc" secondAttribute="trailing" constant="18" id="2eG-pL-QLH"/>
+                                                <constraint firstItem="0xC-YF-MRc" firstAttribute="leading" secondItem="UVL-lH-De8" secondAttribute="leading" constant="20" id="o3o-94-h8n"/>
+                                                <constraint firstItem="0xC-YF-MRc" firstAttribute="top" secondItem="UVL-lH-De8" secondAttribute="top" constant="29" id="zmv-1j-dAd"/>
+                                                <constraint firstAttribute="bottom" secondItem="0xC-YF-MRc" secondAttribute="bottom" constant="18" id="zxA-a3-bQb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="todoSwitch" destination="gOG-vT-0Df" id="hS4-gL-1Wa"/>
+                                            <outlet property="todoTitleLabel" destination="NXx-cf-yPc" id="VEW-v0-R3j"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
