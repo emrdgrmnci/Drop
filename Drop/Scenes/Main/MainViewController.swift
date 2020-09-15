@@ -53,6 +53,7 @@ class MainViewController: UIViewController, MainDisplayLogic {
         presenter.viewController = viewController
     }
 
+    //MARK: - prepareTableView
     func prepareTableView() {
         tableView.dataSource = self
         tableView.delegate = self
@@ -61,22 +62,34 @@ class MainViewController: UIViewController, MainDisplayLogic {
         tableView.estimatedRowHeight = 44
     }
 
+    //MARK: - displayTodayData
     func displayTodayData(viewModel: ListToday.FetchToday.ViewModel) {
         displayedTodoData = viewModel.displayedTodos
         reloadTableView()
     }
 }
 
+//MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return displayedData.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
     }
 }
 
+//MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
 
+}
+
+//MARK: - TableViewUpdater
+extension MainViewController: TableViewUpdater {
+    func updateTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
