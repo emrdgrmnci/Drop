@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol TableViewUpdater: class {
+    func updateTableView()
+}
+
 class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var todoTitleLabel: UILabel!
     @IBOutlet weak var todoSwitch: UISwitch!
+
+    weak var delegate: TableViewUpdater?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +32,9 @@ class MainTableViewCell: UITableViewCell {
     func configureCell(dailyData: Todo) {
         todoTitleLabel.text = dailyData.title
         todoSwitch.isOn = dailyData.completed
+    }
+
+    func updateTableView() {
+        self.delegate?.updateTableView()
     }
 }
