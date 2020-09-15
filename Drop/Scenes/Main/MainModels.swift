@@ -6,4 +6,19 @@
 //  Copyright © 2020 Ali Emre Degirmenci. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+enum ListToday
+{
+    // MARK: Data structure
+    enum FetchToday {
+        struct Request {
+        }
+        struct Response : Codable {
+            var todo: Todo?
+        }
+        struct ViewModel {
+            var displayedTodos: [Todo]
+        }
+    }
+}
