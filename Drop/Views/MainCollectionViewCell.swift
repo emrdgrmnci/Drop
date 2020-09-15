@@ -13,8 +13,13 @@ protocol CollectionViewUpdater: class {
 }
 
 class MainCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var dayLabel: UILabel!
 
     weak var delegate: CollectionViewUpdater?
+
+    func configureCell(dailyData: Day) {
+        dayLabel.text = dailyData.name
+    }
 
     func updateCollectionView() {
       self.delegate?.updateCollectionView()

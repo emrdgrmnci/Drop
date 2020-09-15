@@ -19,7 +19,7 @@ class MainWorker {
                 //Decode the raw data using the typesafe DataModel struct
                 let decoder = JSONDecoder()
                 let todoData = try decoder.decode([Todo].self, from: jsonData)
-
+                completion(todoData, nil)
                 // Print information about each nest
                 todoData.forEach { (nest) in
                     print("Todo #\(nest.id) is a \(nest.title) title")
