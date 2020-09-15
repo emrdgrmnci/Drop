@@ -19,6 +19,8 @@ class MainViewController: UIViewController, MainDisplayLogic {
 
     var interactor: MainBusinessLogic?
 
+    private var selectedRow = -1
+
     let days = [Day(name: "Monday"),
                 Day(name: "Tuesday"),
                 Day(name: "Wednesday"),
@@ -120,6 +122,17 @@ extension MainViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
         let data = days[indexPath.row]
         cell.configureCell(dailyData: data)
+
+        if selectedRow == indexPath.row {
+            cell.layer.borderColor = UIColor.blue.cgColor
+            cell.layer.cornerRadius = 25
+            cell.layer.borderWidth = 1
+        }
+        else {
+            cell.layer.borderWidth = 0
+        }
+
+
         return cell
     }
 }
@@ -135,7 +148,12 @@ extension MainViewController: CollectionViewUpdater {
 
 //MARK: - UICollectionViewDelegate
 extension MainViewController: UICollectionViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if selectedRow == indexPath.row {
+            selectedRow = -1
+        } else {
+            selectedRow = indexPath.row
+        }
+        updateCollectionView()
     }
 }
