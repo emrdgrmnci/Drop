@@ -1,0 +1,38 @@
+[
+{
+"userId": 1,
+"id": 1,
+"title": "Kahvaltı",
+"completed": false
+},
+{
+"userId": 1,
+"id": 2,
+"title": "Çanta hazırlığı",
+"completed": false
+},
+{
+"userId": 1,
+"id": 3,
+"title": "Giyim",
+"completed": false
+},
+{
+"userId": 1,
+"id": 4,
+"title": "Trafiği hesaba kat",
+"completed": true
+},
+{
+"userId": 1,
+"id": 5,
+"title": "Bankaya git",
+"completed": false
+},
+{
+"userId": 1,
+"id": 6,
+"title": "Faturanı öde",
+"completed": false
+}
+]
