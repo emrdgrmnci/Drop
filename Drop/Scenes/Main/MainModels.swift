@@ -18,7 +18,7 @@ enum ListToday
             var todo: Todo?
         }
         struct ViewModel {
-            var displayedTodos: [Todo]
+            var displayedTodo: Todo
         }
     }
 }
