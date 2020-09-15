@@ -23,7 +23,14 @@ class MainViewController: UIViewController, MainDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        prepareTableView()
+        fetchTodayInTodos()
+    }
+
+    // MARK: Fetch today in the history data
+    func fetchTodayInTodos() {
+        let request = ListToday.FetchToday.Request()
+        interactor?.fetchTodayInTodos(request: request)
     }
 
     // MARK: Setup
@@ -60,5 +67,5 @@ extension MainViewController: UITableViewDataSource {
 }
 
 extension MainViewController: UITableViewDelegate {
-    
+
 }
