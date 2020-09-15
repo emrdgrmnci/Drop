@@ -76,7 +76,12 @@ extension MainViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
+        let data = displayedData[indexPath.row]
+        print("data: \(data)")
+        cell.configureCell(dailyData: data)
+        cell.delegate = self
+        return cell
     }
 }
 
