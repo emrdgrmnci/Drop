@@ -21,7 +21,7 @@ class MainViewController: UIViewController, MainDisplayLogic {
 
     var switchStates = [Bool]()
 
-    private var selectedRow = -1
+    private var collectionViewSelectedRow = -1
 
     let days = [Day(name: "Monday"),
                 Day(name: "Tuesday"),
@@ -44,9 +44,7 @@ class MainViewController: UIViewController, MainDisplayLogic {
 
         if switchStates.isEmpty {
             switchStates = UserDefaults.standard.array(forKey: "switchStates") as? [Bool] ?? []
-        }
-
-        if switchStates.isEmpty {
+        } else {
             switchStates = (0..<displayedTodoData.count).map { $0 == $0 }
             UserDefaults.standard.set(switchStates, forKey: "switchStates")
         }
@@ -141,7 +139,7 @@ extension MainViewController: UICollectionViewDataSource {
         let data = days[indexPath.row]
         cell.configureCell(dailyData: data)
 
-        if selectedRow == indexPath.row {
+        if collectionViewSelectedRow == indexPath.row {
             cell.layer.borderColor = UIColor.blue.cgColor
             cell.layer.cornerRadius = 25
             cell.layer.borderWidth = 1
@@ -165,10 +163,10 @@ extension MainViewController: CollectionViewUpdater {
 //MARK: - UICollectionViewDelegate
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if selectedRow == indexPath.row {
-            selectedRow = -1
+        if collectionViewSelectedRow == indexPath.row {
+            collectionViewSelectedRow = -1
         } else {
-            selectedRow = indexPath.row
+            collectionViewSelectedRow = indexPath.row
         }
         updateCollectionView()
     }
