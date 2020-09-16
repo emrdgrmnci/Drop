@@ -43,8 +43,7 @@ class MainViewController: UIViewController, MainDisplayLogic {
 
     // MARK: Fetch today in the history data
     func fetchTodayInTodos() {
-        let request = ListToday.FetchToday.Request()
-        interactor?.fetchTodayInTodos(request: request)
+        interactor?.fetchTodayInTodos()
     }
 
     //MARK: - reloadTableView

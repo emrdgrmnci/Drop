@@ -11,7 +11,7 @@ import Foundation
 final class SavedTodoWorker {
     let todos = [Int: Bool]()
 
-    func login(id: Int?, completed: Bool?) -> Bool {
+    func saveTodo(id: Int?, completed: Bool?) -> Bool {
         guard let id = id, let completed = completed else { return false }
         return todos[id] == completed
     }
