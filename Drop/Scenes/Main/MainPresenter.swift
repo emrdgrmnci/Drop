@@ -10,10 +10,13 @@ import UIKit
 
 protocol MainPresentationLogic {
     func presentFetchedToday(response: ListToday.FetchToday.Response)
+    func presentSavedTodoItems(response: [String: Bool])
 }
 
 class MainPresenter: MainPresentationLogic {
     weak var viewController: MainDisplayLogic?
+
+    var savedTodoItems = [String: Bool]()
 
     func presentFetchedToday(response: ListToday.FetchToday.Response) {
         if let displayedTodo = response.todo {
@@ -22,5 +25,9 @@ class MainPresenter: MainPresentationLogic {
         } else {
             print("error")
         }
+    }
+
+    func presentSavedTodoItems(response: [String : Bool]) {
+        savedTodoItems = response
     }
 }
