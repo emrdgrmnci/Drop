@@ -41,7 +41,7 @@ class MainViewController: UIViewController, MainDisplayLogic {
         fetchTodayInTodos()
     }
 
-    // MARK: Fetch today in the history data
+    // MARK: Fetch today data
     func fetchTodayInTodos() {
         interactor?.fetchTodayInTodos()
     }
@@ -97,7 +97,7 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
         let data = displayedTodoData[indexPath.row]
         print("data: \(data)")
-        cell.configureCell(dailyData: data)
+        cell.configureCell(data: data)
         cell.delegate = self
         return cell
     }

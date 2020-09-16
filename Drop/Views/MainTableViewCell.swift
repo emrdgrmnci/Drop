@@ -33,12 +33,16 @@ class MainTableViewCell: UITableViewCell {
 
     //MARK: - switchButtonAction
     @IBAction func switchButton(_ sender: UISwitch) {
-        
+        if sender.isOn {
+            todoSwitch.isOn = true
+        } else {
+            todoSwitch.isOn = false
+        }
     }
 
-    func configureCell(dailyData: Todo) {
-        todoTitleLabel.text = dailyData.title
-        todoSwitch.isOn = false
+    func configureCell(data: Todo) {
+        todoTitleLabel.text = data.title
+//        setCompleted(isCompleted: data.isCompleted ?? false)
     }
 
     func updateTableView() {
