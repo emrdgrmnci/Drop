@@ -39,11 +39,17 @@ class MainViewController: UIViewController, MainDisplayLogic {
         prepareTableView()
         setup()
         fetchTodayInTodos()
+        savedTodayInTodos()
     }
 
     // MARK: Fetch today data
     func fetchTodayInTodos() {
         interactor?.fetchTodayInTodos()
+    }
+
+    // MARK: Fetch saved data
+    func savedTodayInTodos() {
+        interactor?.saveTodayInTodos()
     }
 
     //MARK: - reloadTableView
