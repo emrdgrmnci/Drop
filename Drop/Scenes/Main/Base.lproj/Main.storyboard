@@ -45,6 +45,9 @@
                                                                 <constraint firstAttribute="width" constant="49" id="9wv-nS-FKs"/>
                                                                 <constraint firstAttribute="height" constant="31" id="ABf-ty-8zY"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <action selector="switchButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="ha6-7H-awc"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                 </stackView>

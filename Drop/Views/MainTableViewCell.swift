@@ -31,7 +31,7 @@ class MainTableViewCell: UITableViewCell {
 
     func configureCell(dailyData: Todo) {
         todoTitleLabel.text = dailyData.title
-//        todoSwitch.isOn = dailyData.completed
+        todoSwitch.isOn = false
     }
 
     func updateTableView() {
