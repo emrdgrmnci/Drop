@@ -100,6 +100,11 @@ class MainViewController: UIViewController, MainDisplayLogic {
 
 //MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "List of Todos"
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return displayedTodoData.count
     }

@@ -33,6 +33,5 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
 
     func saveTodayInTodos(response: ListToday.FetchToday.Response) {
         mainWorker = MainWorker()
-        mainWorker?.saveTodoState(response.todo?.first?.completed)
     }
 }
