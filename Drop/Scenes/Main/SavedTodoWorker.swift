@@ -8,3 +8,19 @@
 
 import Foundation
 
+final class SavedTodoWorker {
+    let todos = [Int: Bool]()
+
+    func login(id: Int?, completed: Bool?) -> Bool {
+        guard let id = id, let completed = completed else { return false }
+        return todos[id] == completed
+    }
+
+    func saveID(_ id: Int?) {
+        UserDefaults.standard.set(id, forKey: "id")
+    }
+
+    func getID() -> Int? {
+        return UserDefaults.standard.integer(forKey: "id")
+    }
+}
