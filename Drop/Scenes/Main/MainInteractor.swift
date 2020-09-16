@@ -37,7 +37,18 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
     }
 
     func saveTodayInTodos() {
-//        savedTodoWorker = SavedTodoWorker()
-//        savedTodoWorker?.saveTodo(id: <#T##Int?#>, completed: <#T##Bool?#>)
+        savedTodoWorker = SavedTodoWorker()
+        savedTodoWorker?.saveTodo { todo in
+            switch(todo) {
+            case .success(let response):
+                self.presenter?.presentSavedTodoItems(response: response)
+            case .failure(_):
+                self.presenter?.presentSavedTodoItems(response: [String: Bool]())
+            }
+        }
+    }
+
+    func setCompleted(id: String, completed: Bool) {
+        savedTodoWorker?.setCompleted(id: id, completed: completed)
     }
 }
