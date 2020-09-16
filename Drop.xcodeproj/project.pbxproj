@@ -22,7 +22,18 @@
 		47580F07250FD28F00F0B733 /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F06250FD28F00F0B733 /* MainWorker.swift */; };
 		47580F09250FD2A300F0B733 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F08250FD2A300F0B733 /* MainModels.swift */; };
 		47636E13251255FB00237E37 /* SavedTodoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47636E12251255FB00237E37 /* SavedTodoWorker.swift */; };
+		47636E332512A5D000237E37 /* DropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47636E322512A5CF00237E37 /* DropTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47636E2D2512A5B000237E37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47580EDC250FC2F800F0B733 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47580EE3250FC2F800F0B733;
+			remoteInfo = Drop;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4733CFA82510FD7800F91EB0 /* todo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = todo.json; sourceTree = "<group>"; };
@@ -42,10 +53,20 @@
 		47580F06250FD28F00F0B733 /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
 		47580F08250FD2A300F0B733 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
 		47636E12251255FB00237E37 /* SavedTodoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTodoWorker.swift; sourceTree = "<group>"; };
+		47636E282512A5B000237E37 /* DropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47636E2C2512A5B000237E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47636E322512A5CF00237E37 /* DropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		47580EE1250FC2F800F0B733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47636E252512A5B000237E37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				47580EE6250FC2F800F0B733 /* Drop */,
+				47636E292512A5B000237E37 /* DropTests */,
 				47580EE5250FC2F800F0B733 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				47580EE4250FC2F800F0B733 /* Drop.app */,
+				47636E282512A5B000237E37 /* DropTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +173,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		47636E292512A5B000237E37 /* DropTests */ = {
+			isa = PBXGroup;
+			children = (
+				47636E2C2512A5B000237E37 /* Info.plist */,
+				47636E322512A5CF00237E37 /* DropTests.swift */,
+			);
+			path = DropTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +202,24 @@
 			productReference = 47580EE4250FC2F800F0B733 /* Drop.app */;
 			productType = "com.apple.product-type.application";
 		};
+		47636E272512A5B000237E37 /* DropTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47636E2F2512A5B000237E37 /* Build configuration list for PBXNativeTarget "DropTests" */;
+			buildPhases = (
+				47636E242512A5B000237E37 /* Sources */,
+				47636E252512A5B000237E37 /* Frameworks */,
+				47636E262512A5B000237E37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47636E2E2512A5B000237E37 /* PBXTargetDependency */,
+			);
+			name = DropTests;
+			productName = DropTests;
+			productReference = 47636E282512A5B000237E37 /* DropTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -182,6 +232,11 @@
 				TargetAttributes = {
 					47580EE3250FC2F800F0B733 = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					47636E272512A5B000237E37 = {
+						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
+						TestTargetID = 47580EE3250FC2F800F0B733;
 					};
 				};
 			};
@@ -199,6 +254,7 @@
 			projectRoot = "";
 			targets = (
 				47580EE3250FC2F800F0B733 /* Drop */,
+				47636E272512A5B000237E37 /* DropTests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,6 +268,13 @@
 				47580EF1250FC2FD00F0B733 /* Assets.xcassets in Resources */,
 				47580EEF250FC2F800F0B733 /* Main.storyboard in Resources */,
 				4733CFA92510FD7800F91EB0 /* todo.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47636E262512A5B000237E37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +299,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47636E242512A5B000237E37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47636E332512A5D000237E37 /* DropTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47636E2E2512A5B000237E37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47580EE3250FC2F800F0B733 /* Drop */;
+			targetProxy = 47636E2D2512A5B000237E37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		47580EED250FC2F800F0B733 /* Main.storyboard */ = {
@@ -408,6 +487,49 @@
 			};
 			name = Release;
 		};
+		47636E302512A5B000237E37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 554X8TL4T7;
+				INFOPLIST_FILE = DropTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pairs.DropTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drop.app/Drop";
+			};
+			name = Debug;
+		};
+		47636E312512A5B000237E37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 554X8TL4T7;
+				INFOPLIST_FILE = DropTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pairs.DropTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drop.app/Drop";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,6 +547,15 @@
 			buildConfigurations = (
 				47580EF9250FC2FD00F0B733 /* Debug */,
 				47580EFA250FC2FD00F0B733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47636E2F2512A5B000237E37 /* Build configuration list for PBXNativeTarget "DropTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47636E302512A5B000237E37 /* Debug */,
+				47636E312512A5B000237E37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

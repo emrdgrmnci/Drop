@@ -10,6 +10,7 @@ import UIKit
 
 protocol MainDisplayLogic: class {
     func displayTodayData(viewModel: ListToday.FetchToday.ViewModel)
+    func displaySavedData(viewModel: ListToday.FetchToday.ViewModel)
 }
 
 class MainViewController: UIViewController, MainDisplayLogic {
@@ -86,6 +87,12 @@ class MainViewController: UIViewController, MainDisplayLogic {
         displayedTodoData = viewModel.displayedTodos
         reloadTableView()
     }
+
+    //MARK: - displayTodayData
+       func displaySavedData(viewModel: ListToday.FetchToday.ViewModel) {
+           displayedTodoData = viewModel.displayedTodos
+           reloadTableView()
+       }
 }
 
 //MARK: - UITableViewDataSource
