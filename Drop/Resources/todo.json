@@ -2,37 +2,31 @@
 {
 "userId": 1,
 "id": 1,
-"title": "Kahvaltı",
-"completed": false
+"title": "Kahvaltı"
 },
 {
 "userId": 1,
 "id": 2,
-"title": "Çanta hazırlığı",
-"completed": false
+"title": "Çanta hazırlığı"
 },
 {
 "userId": 1,
 "id": 3,
-"title": "Kıyafetlerini ütüle",
-"completed": false
+"title": "Kıyafetlerini ütüle"
 },
 {
 "userId": 1,
 "id": 4,
-"title": "Trafiği hesaba kat",
-"completed": true
+"title": "Trafiği hesaba kat"
 },
 {
 "userId": 1,
 "id": 5,
-"title": "Bankaya git",
-"completed": false
+"title": "Bankaya git"
 },
 {
 "userId": 1,
 "id": 6,
-"title": "Faturanı öde",
-"completed": false
+"title": "Faturanı öde"
 }
 ]
