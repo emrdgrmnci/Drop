@@ -19,7 +19,7 @@ class MainViewController: UIViewController, MainDisplayLogic {
 
     var interactor: MainBusinessLogic?
 
-    var switchStates = [Bool]()
+    var userDefaults = UserDefaults.standard
 
     private var collectionViewSelectedRow = -1
 
@@ -41,13 +41,6 @@ class MainViewController: UIViewController, MainDisplayLogic {
         prepareTableView()
         setup()
         fetchTodayInTodos()
-
-        if switchStates.isEmpty {
-            switchStates = UserDefaults.standard.array(forKey: "switchStates") as? [Bool] ?? []
-        } else {
-            switchStates = (0..<displayedTodoData.count).map { $0 == $0 }
-            UserDefaults.standard.set(switchStates, forKey: "switchStates")
-        }
     }
 
     // MARK: Fetch today in the history data
@@ -90,12 +83,6 @@ class MainViewController: UIViewController, MainDisplayLogic {
         displayedTodoData = viewModel.displayedTodos
         reloadTableView()
     }
-
-    //MARK: - switchButtonAction
-    @IBAction func switchButton(_ sender: UISwitch) {
-        switchStates[sender.tag].toggle()
-        UserDefaults.standard.set(switchStates, forKey: "switchStates")
-    }
 }
 
 //MARK: - UITableViewDataSource
@@ -115,7 +102,6 @@ extension MainViewController: UITableViewDataSource {
         print("data: \(data)")
         cell.configureCell(dailyData: data)
         cell.delegate = self
-        cell.todoSwitch.isOn = switchStates[indexPath.row]
         return cell
     }
 }

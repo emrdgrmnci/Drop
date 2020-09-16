@@ -46,7 +46,7 @@
                                                                 <constraint firstAttribute="height" constant="31" id="ABf-ty-8zY"/>
                                                             </constraints>
                                                             <connections>
-                                                                <action selector="switchButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="ha6-7H-awc"/>
+                                                                <action selector="switchButton:" destination="C8r-mG-wIb" eventType="valueChanged" id="l0n-JA-9MB"/>
                                                             </connections>
                                                         </switch>
                                                     </subviews>

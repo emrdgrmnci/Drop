@@ -17,7 +17,9 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var todoTitleLabel: UILabel!
     @IBOutlet weak var todoSwitch: UISwitch!
 
-     weak var delegate: TableViewUpdater?
+    var defaults = UserDefaults.standard
+
+    weak var delegate: TableViewUpdater?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,12 +31,17 @@ class MainTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    //MARK: - switchButtonAction
+    @IBAction func switchButton(_ sender: UISwitch) {
+        
+    }
+
     func configureCell(dailyData: Todo) {
         todoTitleLabel.text = dailyData.title
         todoSwitch.isOn = false
     }
 
     func updateTableView() {
-      self.delegate?.updateTableView()
+        self.delegate?.updateTableView()
     }
 }
