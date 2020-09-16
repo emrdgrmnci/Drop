@@ -122,7 +122,9 @@ extension MainViewController: UITableViewDataSource {
 
 //MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 //MARK: - TableViewUpdater
