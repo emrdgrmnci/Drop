@@ -8,8 +8,7 @@
 
 import UIKit
 
-enum ListToday
-{
+enum ListToday {
     // MARK: Data structure
     enum FetchToday {
         struct Request {

@@ -19,8 +19,6 @@ class MainViewController: UIViewController, MainDisplayLogic {
 
     var interactor: MainBusinessLogic?
 
-    var userDefaults = UserDefaults.standard
-
     private var collectionViewSelectedRow = -1
 
     let days = [Day(name: "Monday"),

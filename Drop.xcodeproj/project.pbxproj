@@ -21,6 +21,7 @@
 		47580F05250FD28000F0B733 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F04250FD28000F0B733 /* MainPresenter.swift */; };
 		47580F07250FD28F00F0B733 /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F06250FD28F00F0B733 /* MainWorker.swift */; };
 		47580F09250FD2A300F0B733 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F08250FD2A300F0B733 /* MainModels.swift */; };
+		47636E13251255FB00237E37 /* SavedTodoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47636E12251255FB00237E37 /* SavedTodoWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		47580F04250FD28000F0B733 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		47580F06250FD28F00F0B733 /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
 		47580F08250FD2A300F0B733 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
+		47636E12251255FB00237E37 /* SavedTodoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTodoWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				47580F04250FD28000F0B733 /* MainPresenter.swift */,
 				47580F00250FD23800F0B733 /* MainViewController.swift */,
 				47580F06250FD28F00F0B733 /* MainWorker.swift */,
+				47636E12251255FB00237E37 /* SavedTodoWorker.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				47580F05250FD28000F0B733 /* MainPresenter.swift in Sources */,
 				4733CFAF2511153700F91EB0 /* MainTableViewCell.swift in Sources */,
 				47580F01250FD23800F0B733 /* MainViewController.swift in Sources */,
+				47636E13251255FB00237E37 /* SavedTodoWorker.swift in Sources */,
 				47580EE8250FC2F800F0B733 /* AppDelegate.swift in Sources */,
 				4733CFAC2511015300F91EB0 /* Todo.swift in Sources */,
 				47580EEA250FC2F800F0B733 /* SceneDelegate.swift in Sources */,
