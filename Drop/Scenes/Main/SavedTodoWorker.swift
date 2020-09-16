@@ -9,15 +9,23 @@
 import Foundation
 
 final class SavedTodoWorker {
-    let todos = [Int: Bool]()
 
-    func saveTodo(id: Int?, completed: Bool?) -> Bool {
-        guard let id = id, let completed = completed else { return false }
-        return todos[id] == completed
+    var todos = [String: Bool]()
+
+    func saveTodo(completion: @escaping (Result<[String: Bool], Error>) -> ()) {
+        if let result = UserDefaults.standard.dictionary(forKey: "id") as? [String: Bool] {
+            todos = result
+            completion(.success(todos))
+        }
     }
 
-    func saveID(_ id: Int?) {
-        UserDefaults.standard.set(id, forKey: "id")
+    func setCompleted(id: String, completed: Bool) {
+        todos[id] = completed
+        saveID()
+    }
+
+    func saveID() {
+        UserDefaults.standard.set(todos, forKey: "id")
     }
 
     func getID() -> Int? {
