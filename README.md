@@ -3,7 +3,7 @@
 Purpose of the project
 ======================
 
-Todo application implemented with VIP(Clean Swift) pattern.
+A sample ToDo app to demonstrate VIP(Clean Swift) implementation in iOS.
 
 Screen
 ======================
@@ -13,7 +13,6 @@ Screen
 </p>
 
 ## Tech-stack :calling:
-
 
 * [VIP](https://clean-swift.com)
 
