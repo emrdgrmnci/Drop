@@ -8,7 +8,7 @@ Todo apllication implemented with VIP(Clean Swift) pattern.
 Screen
 ======================
 <p float="left">
-  <img src="ScreenImages/ss.png" width="1200" height= "900"/>&nbsp; 
+  <img src="ScreenImages/ss.png" width="900" height= "700"/>&nbsp; 
   </br> 
 </p>
 
