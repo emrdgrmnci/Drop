@@ -24,7 +24,7 @@ final class DropTests: XCTestCase {
         sut.endAppearanceTransition()
     }
 
-    private func testShouldFetchMoviesWhenViewDidLoad() {
+    private func testShouldFetchTodosWhenViewDidLoad() {
         // When
         sut.viewDidLoad()
         // Then
@@ -43,7 +43,7 @@ final class DropTests: XCTestCase {
         XCTAssert(mainWorkerSpy.fetchTodosCalled, "fetchTodos() should ask the worker to fetch todos")
     }
 
-    private func testFetchMoviesCallsPresenterToFormatMovies() {
+    private func testFetchTodosCallsPresenterToFormatTodos() {
         // Given
         let mainWorkerSpy = MainWorkerSpy()
         let presenterSpy = MainPresenterSpy()
@@ -53,7 +53,7 @@ final class DropTests: XCTestCase {
         // When
         sut.fetchTodayInTodos()
         // Then
-        XCTAssert(presenterSpy.fetchTodosCalled, "fetchTodos() should ask the presenter to format the movies")
+        XCTAssert(presenterSpy.fetchTodosCalled, "fetchTodos() should ask the presenter to format the todos")
     }
 
     private func testFetchTodosCallsPresenterToFormatFetchedTodos() {
@@ -72,7 +72,7 @@ final class DropTests: XCTestCase {
     }
 
     // MARK: - Tests
-    private func testDisplayFetchedMoviesCalledByPresenter() {
+    private func testDisplayFetchedTodosCalledByPresenter() {
         // Given
         let viewControllerSpy = ViewControllerSpy()
         let sut = MainPresenter()
@@ -94,7 +94,7 @@ final class DropTests: XCTestCase {
         // Then
         let displayedTodos = viewControllerSpy.displayedTodos
 
-        XCTAssertEqual(displayedTodos.count, todos.count, "presentFetchedMovies() should ask the view controller to display same amount of movies it receive")
+        XCTAssertEqual(displayedTodos.count, todos.count, "presentFetchedTodos() should ask the view controller to display same amount of todos it receive")
 
         for (_, displayedTodo) in displayedTodos.enumerated() {
             XCTAssertEqual(displayedTodo.displayedTodos[0].title, "Kahvaltı")
@@ -111,7 +111,7 @@ final class DropTests: XCTestCase {
         // When
         sut.displayTodayData(viewModel: viewModels.first!)
         // Then
-        XCTAssert(tableViewSpy.reloadDataCalled, "Displaying fetched movies should reload the table view")
+        XCTAssert(tableViewSpy.reloadDataCalled, "Displaying fetched todos should reload the table view")
     }
 
     private func testNumberOfRowsInAnySectionShouldEqualNumberOfTodosToDisplay() {
@@ -124,7 +124,7 @@ final class DropTests: XCTestCase {
         let numberOfRows = sut.tableView(tableView!,
                                          numberOfRowsInSection: 1)
         // Then
-        XCTAssertEqual(numberOfRows, viewModels.count, "The number of tableview rows should equal the number of movies to display")
+        XCTAssertEqual(numberOfRows, viewModels.count, "The number of tableview rows should equal the number of todos to display")
     }
 
     private func testShouldConfigureTableViewCellToDisplayOrder() {
