@@ -10,8 +10,10 @@ import Foundation
 
 final class SavedTodoWorker {
 
-    var todos = [String: Bool]()
+    //MARK: - Class Property
+    private var todos = [String: Bool]()
 
+    //MARK: - saveTodo
     func saveTodo(completion: @escaping (Result<[String: Bool], Error>) -> ()) {
         if let result = UserDefaults.standard.dictionary(forKey: "id") as? [String: Bool] {
             todos = result
@@ -19,16 +21,19 @@ final class SavedTodoWorker {
         }
     }
 
+    //MARK: - setCompleted
     func setCompleted(id: String, completed: Bool) {
         todos[id] = completed
         saveID()
     }
 
-    func saveID() {
+    //MARK: - saveID
+    private func saveID() {
         UserDefaults.standard.set(todos, forKey: "id")
     }
 
-    func getID() -> Int? {
+    //MARK: - getID
+    private  func getID() -> Int? {
         return UserDefaults.standard.integer(forKey: "id")
     }
 }
