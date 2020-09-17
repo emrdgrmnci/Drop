@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Todo: Codable {
+struct Todo: Codable, Equatable {
     let id: Int?
     let title: String?
     let isCompleted: Bool?

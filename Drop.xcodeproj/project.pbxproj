@@ -24,6 +24,10 @@
 		47636E13251255FB00237E37 /* SavedTodoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47636E12251255FB00237E37 /* SavedTodoWorker.swift */; };
 		47636E332512A5D000237E37 /* DropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47636E322512A5CF00237E37 /* DropTests.swift */; };
 		47C8900C251342E100007D5A /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8900B251342E100007D5A /* Seed.swift */; };
+		47C8900E2513479800007D5A /* MockMainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8900D2513479800007D5A /* MockMainWorker.swift */; };
+		47C89010251347A400007D5A /* MockMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8900F251347A400007D5A /* MockMainPresenter.swift */; };
+		47C890122513547D00007D5A /* MockMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C890112513547D00007D5A /* MockMainInteractor.swift */; };
+		47C890142513562000007D5A /* MockTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C890132513562000007D5A /* MockTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		47636E2C2512A5B000237E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47636E322512A5CF00237E37 /* DropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTests.swift; sourceTree = "<group>"; };
 		47C8900B251342E100007D5A /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
+		47C8900D2513479800007D5A /* MockMainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainWorker.swift; sourceTree = "<group>"; };
+		47C8900F251347A400007D5A /* MockMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainPresenter.swift; sourceTree = "<group>"; };
+		47C890112513547D00007D5A /* MockMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainInteractor.swift; sourceTree = "<group>"; };
+		47C890132513562000007D5A /* MockTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +189,10 @@
 				47C8900A251342D300007D5A /* Mock */,
 				47636E2C2512A5B000237E37 /* Info.plist */,
 				47636E322512A5CF00237E37 /* DropTests.swift */,
+				47C8900D2513479800007D5A /* MockMainWorker.swift */,
+				47C8900F251347A400007D5A /* MockMainPresenter.swift */,
+				47C890112513547D00007D5A /* MockMainInteractor.swift */,
+				47C890132513562000007D5A /* MockTableView.swift */,
 			);
 			path = DropTests;
 			sourceTree = "<group>";
@@ -314,8 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C890122513547D00007D5A /* MockMainInteractor.swift in Sources */,
+				47C890142513562000007D5A /* MockTableView.swift in Sources */,
 				47C8900C251342E100007D5A /* Seed.swift in Sources */,
+				47C89010251347A400007D5A /* MockMainPresenter.swift in Sources */,
 				47636E332512A5D000237E37 /* DropTests.swift in Sources */,
+				47C8900E2513479800007D5A /* MockMainWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
