@@ -12,11 +12,13 @@ protocol TableViewUpdater: class {
     func updateTableView()
 }
 
-class MainTableViewCell: UITableViewCell {
+final class MainTableViewCell: UITableViewCell {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var todoTitleLabel: UILabel!
     @IBOutlet weak var todoSwitch: UISwitch!
 
+    //MARK: - Class Properties
     var defaults = UserDefaults.standard
 
     weak var delegate: TableViewUpdater?
@@ -40,11 +42,12 @@ class MainTableViewCell: UITableViewCell {
         }
     }
 
+    //MARK: - configureCell
     func configureCell(data: Todo) {
         todoTitleLabel.text = data.title
-//        setCompleted(isCompleted: data.isCompleted ?? false)
     }
 
+    //MARK: - updateTableView
     func updateTableView() {
         self.delegate?.updateTableView()
     }
