@@ -23,6 +23,7 @@
 		47580F09250FD2A300F0B733 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47580F08250FD2A300F0B733 /* MainModels.swift */; };
 		47636E13251255FB00237E37 /* SavedTodoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47636E12251255FB00237E37 /* SavedTodoWorker.swift */; };
 		47636E332512A5D000237E37 /* DropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47636E322512A5CF00237E37 /* DropTests.swift */; };
+		47C8900C251342E100007D5A /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8900B251342E100007D5A /* Seed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		47636E282512A5B000237E37 /* DropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47636E2C2512A5B000237E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47636E322512A5CF00237E37 /* DropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTests.swift; sourceTree = "<group>"; };
+		47C8900B251342E100007D5A /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,10 +178,19 @@
 		47636E292512A5B000237E37 /* DropTests */ = {
 			isa = PBXGroup;
 			children = (
+				47C8900A251342D300007D5A /* Mock */,
 				47636E2C2512A5B000237E37 /* Info.plist */,
 				47636E322512A5CF00237E37 /* DropTests.swift */,
 			);
 			path = DropTests;
+			sourceTree = "<group>";
+		};
+		47C8900A251342D300007D5A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				47C8900B251342E100007D5A /* Seed.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C8900C251342E100007D5A /* Seed.swift in Sources */,
 				47636E332512A5D000237E37 /* DropTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
