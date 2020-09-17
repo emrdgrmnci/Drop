@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainWorker {
+final class MainWorker {
     // Worker function to retrive todo data from local json file
     func fetchTodayInTodos(completion: @escaping (Result<[Todo], Error>) -> ()) {
         if let jsonFilePath = Bundle.main.url(forResource: "todo", withExtension: "json"){
@@ -26,12 +26,14 @@ class MainWorker {
         }
     }
 
-    func saveTodoState(_ isSelected: Bool?)
+    //MARK: - saveTodoState
+    private func saveTodoState(_ isSelected: Bool?)
     {
         UserDefaults.standard.set(isSelected, forKey: "saveTodo")
     }
 
-    func getTodoState() -> Bool?
+    //MARK: - getTodoState
+    private func getTodoState() -> Bool?
     {
         return UserDefaults.standard.bool(forKey: "saveTodo")
     }
