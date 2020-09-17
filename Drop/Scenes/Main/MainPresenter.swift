@@ -13,7 +13,7 @@ protocol MainPresentationLogic: class {
     func presentSavedTodoItems(response: [String: Bool])
 }
 
-final class MainPresenter: MainPresentationLogic {
+class MainPresenter: MainPresentationLogic {
     weak var viewController: MainDisplayLogic?
 
     private var savedTodoItems = [String: Bool]()

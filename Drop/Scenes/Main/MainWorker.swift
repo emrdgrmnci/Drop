@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MainWorker {
+class MainWorker {
     // Worker function to retrive todo data from local json file
     func fetchTodayInTodos(completion: @escaping (Result<[Todo], Error>) -> ()) {
         if let jsonFilePath = Bundle.main.url(forResource: "todo", withExtension: "json"){

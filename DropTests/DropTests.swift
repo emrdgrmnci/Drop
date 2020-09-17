@@ -9,7 +9,7 @@
 import XCTest
 @testable import Drop
 
-class DropTests: XCTestCase {
+final class DropTests: XCTestCase {
 
     // MARK: — Test lifecycle
     var sut: MainViewController!
@@ -24,13 +24,13 @@ class DropTests: XCTestCase {
         sut.endAppearanceTransition()
     }
 
-    func testShouldFetchMoviesWhenViewDidLoad() {
+    private func testShouldFetchMoviesWhenViewDidLoad() {
         // When
         sut.viewDidLoad()
         // Then
     }
 
-    func testFetchTodosCallsWorkerToFetch() {
+    private func testFetchTodosCallsWorkerToFetch() {
         // Given
         let mainWorkerSpy = MainWorkerSpy()
         let presenterSpy = MainPresenterSpy()
@@ -43,7 +43,7 @@ class DropTests: XCTestCase {
         XCTAssert(mainWorkerSpy.fetchTodosCalled, "fetchTodos() should ask the worker to fetch todos")
     }
 
-    func testFetchMoviesCallsPresenterToFormatMovies() {
+    private func testFetchMoviesCallsPresenterToFormatMovies() {
         // Given
         let mainWorkerSpy = MainWorkerSpy()
         let presenterSpy = MainPresenterSpy()
@@ -56,7 +56,7 @@ class DropTests: XCTestCase {
         XCTAssert(presenterSpy.fetchTodosCalled, "fetchTodos() should ask the presenter to format the movies")
     }
 
-    func testFetchTodosCallsPresenterToFormatFetchedTodos() {
+    private func testFetchTodosCallsPresenterToFormatFetchedTodos() {
         // Given
         let todos = Seeds.Todos.all
         let presenterSpy = MainPresenterSpy()
@@ -72,7 +72,7 @@ class DropTests: XCTestCase {
     }
 
     // MARK: - Tests
-    func testDisplayFetchedMoviesCalledByPresenter() {
+    private func testDisplayFetchedMoviesCalledByPresenter() {
         // Given
         let viewControllerSpy = ViewControllerSpy()
         let sut = MainPresenter()
@@ -82,7 +82,7 @@ class DropTests: XCTestCase {
         sut.presentFetchedToday(response: response)
     }
 
-    func testPresentFetchedTodosShouldFormatFetchedTodosForDisplay() {
+    private func testPresentFetchedTodosShouldFormatFetchedTodosForDisplay() {
         // Given
         let todos = Seeds.Todos.all
         let viewControllerSpy = ViewControllerSpy()
@@ -103,7 +103,7 @@ class DropTests: XCTestCase {
         }
     }
 
-    func testShouldDisplayFetchedTodos() {
+    private func testShouldDisplayFetchedTodos() {
         // Given
         let tableViewSpy = TableViewSpy()
         sut.tableView = tableViewSpy
@@ -114,7 +114,7 @@ class DropTests: XCTestCase {
         XCTAssert(tableViewSpy.reloadDataCalled, "Displaying fetched movies should reload the table view")
     }
 
-    func testNumberOfRowsInAnySectionShouldEqualNumberOfTodosToDisplay() {
+    private func testNumberOfRowsInAnySectionShouldEqualNumberOfTodosToDisplay() {
         // Given
         let tableView = sut.tableView
         let displayedTodos = [Todo(id: 1, title: "Kahvaltı", isCompleted: false)]
@@ -127,7 +127,7 @@ class DropTests: XCTestCase {
         XCTAssertEqual(numberOfRows, viewModels.count, "The number of tableview rows should equal the number of movies to display")
     }
 
-    func testShouldConfigureTableViewCellToDisplayOrder() {
+    private func testShouldConfigureTableViewCellToDisplayOrder() {
         // Given
         let tableView = sut.tableView
         let displayedTodos = [Todo(id: 1, title: "Kahvaltı", isCompleted: false)]

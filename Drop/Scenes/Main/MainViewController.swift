@@ -20,7 +20,7 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     @IBOutlet weak var collectionView: UICollectionView!
 
     //MARK: - Class Properties
-    private var interactor: MainBusinessLogic?
+    var interactor: MainBusinessLogic?
     private var collectionViewSelectedRow = -1
     private let days = [Day(name: "Monday"),
                         Day(name: "Tuesday"),
