@@ -13,25 +13,24 @@ protocol MainDisplayLogic: class {
     func displaySavedData(viewModel: ListToday.FetchToday.ViewModel)
 }
 
-class MainViewController: UIViewController, MainDisplayLogic {
+final class MainViewController: UIViewController, MainDisplayLogic {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
 
-    var interactor: MainBusinessLogic?
-
+    //MARK: - Class Properties
+    private var interactor: MainBusinessLogic?
     private var collectionViewSelectedRow = -1
+    private let days = [Day(name: "Monday"),
+                        Day(name: "Tuesday"),
+                        Day(name: "Wednesday"),
+                        Day(name: "Thursday"),
+                        Day(name: "Friday"),
+                        Day(name: "Saturday"),
+                        Day(name: "Sunday")]
 
-    let days = [Day(name: "Monday"),
-                Day(name: "Tuesday"),
-                Day(name: "Wednesday"),
-                Day(name: "Thursday"),
-                Day(name: "Friday"),
-                Day(name: "Saturday"),
-                Day(name: "Sunday")]
-
-
-    var displayedTodoData: [Todo] = []
+    private var displayedTodoData: [Todo] = []
 
     //MARK: - View lifecycle
     override func viewDidLoad() {
@@ -44,17 +43,17 @@ class MainViewController: UIViewController, MainDisplayLogic {
     }
 
     // MARK: Fetch today data
-    func fetchTodayInTodos() {
+    private func fetchTodayInTodos() {
         interactor?.fetchTodayInTodos()
     }
 
     // MARK: Fetch saved data
-    func savedTodayInTodos() {
+    private func savedTodayInTodos() {
         interactor?.saveTodayInTodos()
     }
 
     //MARK: - reloadTableView
-    fileprivate func reloadTableView() {
+    private func reloadTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -71,13 +70,13 @@ class MainViewController: UIViewController, MainDisplayLogic {
     }
 
     //MARK: - prepareTableView
-    func prepareTableView() {
+    private func prepareTableView() {
         tableView.dataSource = self
         tableView.delegate = self
     }
 
     //MARK: - prepareCollectionView
-    func prepareCollectionView() {
+    private func prepareCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
@@ -89,10 +88,10 @@ class MainViewController: UIViewController, MainDisplayLogic {
     }
 
     //MARK: - displayTodayData
-       func displaySavedData(viewModel: ListToday.FetchToday.ViewModel) {
-           displayedTodoData = viewModel.displayedTodos
-           reloadTableView()
-       }
+    func displaySavedData(viewModel: ListToday.FetchToday.ViewModel) {
+        displayedTodoData = viewModel.displayedTodos
+        reloadTableView()
+    }
 }
 
 //MARK: - UITableViewDataSource
@@ -132,6 +131,7 @@ extension MainViewController: TableViewUpdater {
     }
 }
 
+//MARK: UICollectionViewDataSource
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         days.count
