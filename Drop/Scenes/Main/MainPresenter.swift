@@ -8,15 +8,15 @@
 
 import UIKit
 
-protocol MainPresentationLogic {
+protocol MainPresentationLogic: class {
     func presentFetchedToday(response: ListToday.FetchToday.Response)
     func presentSavedTodoItems(response: [String: Bool])
 }
 
-class MainPresenter: MainPresentationLogic {
+final class MainPresenter: MainPresentationLogic {
     weak var viewController: MainDisplayLogic?
 
-    var savedTodoItems = [String: Bool]()
+    private var savedTodoItems = [String: Bool]()
 
     func presentFetchedToday(response: ListToday.FetchToday.Response) {
         if let displayedTodo = response.todo {
