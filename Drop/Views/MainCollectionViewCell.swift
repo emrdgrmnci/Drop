@@ -12,7 +12,9 @@ protocol CollectionViewUpdater: class {
     func updateCollectionView()
 }
 
-class MainCollectionViewCell: UICollectionViewCell {
+final class MainCollectionViewCell: UICollectionViewCell {
+
+    //MARK: - IBOutlets
     @IBOutlet weak var dayLabel: UILabel!
 
     weak var delegate: CollectionViewUpdater?
