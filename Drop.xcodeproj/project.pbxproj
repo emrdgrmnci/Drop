@@ -28,6 +28,7 @@
 		47C89010251347A400007D5A /* MockMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8900F251347A400007D5A /* MockMainPresenter.swift */; };
 		47C890122513547D00007D5A /* MockMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C890112513547D00007D5A /* MockMainInteractor.swift */; };
 		47C890142513562000007D5A /* MockTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C890132513562000007D5A /* MockTableView.swift */; };
+		47F986BF251359830068025E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 47F986BE251359830068025E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		47C8900F251347A400007D5A /* MockMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainPresenter.swift; sourceTree = "<group>"; };
 		47C890112513547D00007D5A /* MockMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainInteractor.swift; sourceTree = "<group>"; };
 		47C890132513562000007D5A /* MockTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableView.swift; sourceTree = "<group>"; };
+		47F986BE251359830068025E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		47580EDB250FC2F700F0B733 = {
 			isa = PBXGroup;
 			children = (
+				47F986BE251359830068025E /* README.md */,
 				47580EE6250FC2F800F0B733 /* Drop */,
 				47636E292512A5B000237E37 /* DropTests */,
 				47580EE5250FC2F800F0B733 /* Products */,
@@ -289,6 +292,7 @@
 			files = (
 				47580EF4250FC2FD00F0B733 /* LaunchScreen.storyboard in Resources */,
 				47580EF1250FC2FD00F0B733 /* Assets.xcassets in Resources */,
+				47F986BF251359830068025E /* README.md in Resources */,
 				47580EEF250FC2F800F0B733 /* Main.storyboard in Resources */,
 				4733CFA92510FD7800F91EB0 /* todo.json in Resources */,
 			);
