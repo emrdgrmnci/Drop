@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol MainBusinessLogic {
+protocol MainBusinessLogic: class {
     func fetchTodayInTodos()
     func saveTodayInTodos()
 }
 
-protocol MainDataStore {
+protocol MainDataStore: class {
 }
 
-class MainInteractor: MainBusinessLogic, MainDataStore {
+final class MainInteractor: MainBusinessLogic, MainDataStore {
     var presenter: MainPresentationLogic?
     var mainWorker: MainWorker?
     var savedTodoWorker: SavedTodoWorker?
-    var todo: [Todo]?
+    private var todo: [Todo]?
 
     func fetchTodayInTodos() {
         mainWorker = MainWorker()
