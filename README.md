@@ -3,7 +3,7 @@
 Purpose of the project
 ======================
 
-Todo apllication implemented with VIP(Clean Swift) pattern.
+Todo application implemented with VIP(Clean Swift) pattern.
 
 Screen
 ======================
