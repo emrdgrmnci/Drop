@@ -9,14 +9,11 @@
 import UIKit
 
 class MainWorker {
-    // Worker function to retrive todo data from local json file
+
     func fetchTodayInTodos(completion: @escaping (Result<[Todo], Error>) -> ()) {
         if let jsonFilePath = Bundle.main.url(forResource: "todo", withExtension: "json"){
             do {
-                //Read the raw JSON data from the local file
                 let jsonData = try Data(contentsOf: jsonFilePath)
-
-                //Decode the raw data using the typesafe DataModel struct
                 let decoder = JSONDecoder()
                 let todoData = try decoder.decode([Todo].self, from: jsonData)
                 completion(.success(todoData))
